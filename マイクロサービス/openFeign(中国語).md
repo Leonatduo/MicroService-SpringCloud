@@ -6,13 +6,13 @@
 - 与本地方法调用差异大，编程体验不统一
 
 ## OpenFeign解决方案
-OpenFeign通过声明式HTTP客户端，让远程调用像本地方法调用一样简单。其核心是处理四个关键点：
+OpenFeign通过声明式HTTP客户端，让远程调用像本地方法调用一样简单。其核心是处理四个关键点
 1. 请求方式
 2. 请求路径
 3. 请求参数
 4. 返回值类型
 
-OpenFeign利用SpringMVC注解声明这些参数，基于动态代理生成远程调用代码。
+OpenFeign利用SpringMVC注解声明这些参数，基于动态代理生成远程调用代码
 
 ## 4.1 快速入门
 
@@ -66,5 +66,5 @@ public interface ItemClient {
 - @RequestParam("ids") Collection<Long> ids ：声明请求参数
 - List<ItemDTO> ：返回值类型
 
-有了上述信息，OpenFeign就可以利用动态代理帮我们实现这个方法，并且向http://item-service/items发送一个GET请求，携带ids为请求参数，并自动将返回值处理为List<ItemDTO>。
+有了上述信息，OpenFeign就可以利用动态代理帮我们实现这个方法，并且向http://item-service/items发送一个GET请求，携带ids为请求参数，并自动将返回值处理为List<ItemDTO>
 我们只需要直接调用这个方法，即可实现远程调用了。
