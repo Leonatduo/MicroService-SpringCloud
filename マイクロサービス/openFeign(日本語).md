@@ -61,11 +61,11 @@ public interface ItemClient {
 ```
 
 このインターフェースでは、メソッドの実装は不要で、以下の重要な情報を宣言するだけで構いません：
-- @FeignClient("item-service") ：声明服务名称
-- @GetMapping ：声明请求方式
-- @GetMapping("/items") ：声明请求路径
-- @RequestParam("ids") Collection<Long> ids ：声明请求参数
-- List<ItemDTO> ：返回值类型
+- @FeignClient("item-service") ：呼び出すサービスの登録名を指定
+- @GetMapping ：HTTP GETメソッドを使用することを宣言
+- @GetMapping("/items") ：呼び出すAPIのエンドポイントパスを定義
+- @RequestParam("ids") Collection<Long> ids ：呼び出すAPIのエンドポイントパスを定義
+- List<ItemDTO> ：呼び出すAPIのエンドポイントパスを定義
 
 
 
